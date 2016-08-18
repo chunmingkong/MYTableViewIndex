@@ -34,7 +34,8 @@ struct CountryDataSource : DataSource {
     
     private func loadCountryNames() -> [String] {
         return NSLocale.ISOCountryCodes().map { (code) -> String in
-            return NSLocale.currentLocale().displayNameForKey(NSLocaleCountryCode, value: code)!
+            let dispayName = NSLocale.currentLocale().displayNameForKey(NSLocaleCountryCode, value: code)!
+            return dispayName + dispayName + dispayName + dispayName
         }
     }
     
